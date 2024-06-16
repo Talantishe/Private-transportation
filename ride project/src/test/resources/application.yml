@@ -1,0 +1,24 @@
+server:
+   port: 8088    
+   error:
+      whitelabel:
+         enabled: false    
+
+spring:
+  datasource:
+    platform: MySQL
+    # driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/policlinic?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+    password: zxzx
+  # JPA properties
+  jpa:
+    hibernate:
+       ddl-auto: none # When you launch the application for the first time - switch "none" at "create update"
+    show-sql: false
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    # database-platform: org.hibernate.dialect.MySQL55Dialect
+    #  open-in-view: false
+    generate-ddl: true
